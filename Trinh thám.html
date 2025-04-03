@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px;
+            background-color: #000000;
+            color: white;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 10px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        main {
+            flex-grow: 1;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title">Review có tâm không có tầm</div>
+        <nav>
+            <style>
+
+        
+                .search-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 0px;
+                }
+        
+                input[type="text"] {
+                    width: 200px;
+                    padding: 5px;
+                    border: 2px solid #ccc;
+                    border-radius: 5px;
+                    font-size: 16px;
+                }
+        
+            
+            </style>
+        </head>
+        <body>
+        
+            <div class="search-container">
+                <input type="text" id="search-box" placeholder="Search..." onkeypress="handleKeyPress(event)">
+            </div>
+        
+            <script>
+                function handleKeyPress(event) {
+                    if (event.key === "Enter") {
+                        let query = document.getElementById("search-box").value;
+                        alert("Cái này trang trí thôi hehe");
+                    }
+                }
+            </script>
+        
+        </body>
+            <a href=" index.html">Home</a>
+             
+            <a href="Tình cảm.html">Tình cảm</a>
+            <a href="Hành động.html">Hành động</a>
+            <a href="Khoa học viễn tưởng.html">Khoa học viễn tưởng</a>
+             
+            <a href="Kinh dị.html">Kinh dị</a>
+            <a href="Trinh thám.html">Trinh thám</a>
+            <a href="Lịch sử.html">Lịch sử</a>
+             
+            <a href="Hoạt hình.html">Hoạt hình</a>
+        </nav>
+    </header>
+    <main>  
+        <section class="hot-movies">
+            <h1 style="background-color: rgb(48, 48, 48); padding: 10px; width: auto; color: white; border-radius: 5px">Phim trinh thám căng cực </h1>
+            <div class="movie-list">
+                <div class="movie" onclick="toggleReview('Sự im lặng của bầy cừu')">
+                    <img src="Images/sheep.jpg" alt="Sự im lặng của bầy cừu">
+                    <h3>Sự im lặng của bầy cừu (1991) </h3>
+                </div>
+            </div>
+        </section>
+        <section id="review-section" class="review" style="display: none;">
+            <h2 id="review-title"></h2>
+            <p><strong>Thể loại:</strong> <span id="review-genre"></span></p>
+            <p><strong>Thời lượng:</strong> <span id="review-duration"></span></p>
+            <p><strong>Quốc gia:</strong> <span id="review-country"></span></p>
+            <p><strong>Đạo diễn:</strong> <span id="review-director"></span></p>
+            <p><strong>Diễn viên chính:</strong> <span id="review-cast"></span></p>
+            <p><strong>Đánh giá:</strong></p>
+            <p>IMDb: <span id="review-imdb"></span></p>
+            <p>Rotten Tomatoes: <span id="review-rotten"></span></p>
+            <p><strong>Review:</strong> <span id="review-text"></span></p>
+            <p><strong>Điểm cộng:</strong> <span id="review-pros"></span></p>
+            <p><strong>Điểm trừ:</strong> <span id="review-cons"></span></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+<Style> 
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    background: #444;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.hot-movies {
+    text-align: center;
+    padding: 20px;
+}
+
+.movie-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.movie {
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+}
+
+.movie img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.review {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+footer {
+    background-color: #111;
+    color: white;
+    text-align: left;
+    padding: 20px 10px;
+    font-family: Arial, sans-serif;
+}
+
+.top-banner {
+    background-color: red;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-size: larger;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 24px;
+    color: gold;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: auto;
+
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    font-size: 24px;
+    gap: 30px;
+}
+
+.footer-description {
+    margin: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+</Style>
+<footer>
+    <div class="top-banner">
+        <span>⭐ Hoàng Sa & Trường Sa là của Việt Nam! ⭐</span>
+    </div>
+    <div class="footer-content">
+        <div class="logo">
+            <h2>Review có tâm không có tầm</h2>
+            <p>Cái tên nói lên tất cả</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Hỏi-Đáp</a>
+            <a href="#">Chính sách bảo mật</a>
+            <a href="#">Điều khoản sử dụng</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Liên hệ</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="Images/facebook.jpg" width=40px height=40px></a> <!-- Facebook -->
+            <a href="#"><img src="Images/twitter.jpg" width=40px height=40px></a> <!-- Twitter -->
+            <a href="#"><img src="Images/tiktok.jpg" width=40px height=40px></a> <!-- TikTok -->
+            <a href="https://youtu.be/xvFZjo5PgG0?si=9NAU-6w6y13jPj9y"><img src="Images/youtube.jpg" width=40px height=40px></a> <!-- YouTube -->
+            <a href="#"><img src="Images/instagram.jpg" width=40px height=40px></a> <!-- Instagram -->
+        </div>
+    </div>
+    <div class="footer-description">
+        <p> Review có tâm không có tầm - Website review phim uy tín số 1 VN</p>
+        <p>© 2024 Review có tâm không có tầm</p>
+    </div>
+</footer>   
+</html>
+
